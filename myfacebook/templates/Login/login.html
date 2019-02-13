@@ -3,4 +3,20 @@
 
 {% block body %}
 	<h1>Login page</h1>
+
+	<h1>List of Users</h1>
+
+	{% if alluser %}
+		<ul>
+		{% for user in alluser%}
+			<li>{{ user.user_name }} - {{ user.email }}</li>
+		{% endfor %}
+		</ul>
+	{% else %}
+			<h4>No user found.</h4>
+	{% endif %}
+
+
 {% endblock %}
+
+
