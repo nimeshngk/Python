@@ -1,10 +1,12 @@
 {% extends 'Accounts/base_layout.html' %}
 
 {% block content %}
+<center>
 	<h1>Log In</h1>
 	<form class="site-form" action="/Accounts/login/" method="POST">
 		{% csrf_token %}
 		{{ form }}
 		<input type="submit" value="Login">
 	</form>
+</center>
 {% endblock %}

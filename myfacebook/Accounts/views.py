@@ -17,7 +17,7 @@ def login(request):
 			return redirect('/Home/');
 	else:
 		form = AuthenticationForm()
-	return render(request, 'Accounts/login.html', {'form':form})
+	return render(request, 'Accounts/login.html', {'form':form, })
 
 @csrf_protect
 def signup(request):
